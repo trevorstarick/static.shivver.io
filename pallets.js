@@ -1,0 +1,73 @@
+var pallets = [{
+  name: "test",
+  color1: "#ff0000",
+  color2: "#00ff00",
+  color3: "#0000ff",
+  background: "#777777",
+}, {
+  name: "ubuntu",
+  color1: "#dd4814",
+  color2: "#77216f",
+  color3: "#2c001e",
+  background: "#333333",
+}, {
+  name: "airbnb",
+  color1: "#fd5c63",
+  color2: "#fd5c63",
+  color3: "#fd5c63",
+  background: "#f5f5f5",
+}, {
+  name: "auth0",
+  color1: "#16214d",
+  color2: "#44c7f4",
+  color3: "#eb5424",
+  background: "#d0d2d3",
+}, {
+  name: "reddit",
+  color1: "#ff5700",
+  color2: "#ff8b60",
+  color3: "#9494ff",
+  background: "#eff7ff",
+}, {
+  name: "facebook",
+  color1: "#e9eaed",
+  color2: "#3b5998",
+  color3: "#3b5998",
+  background: "#777777",
+}, {
+  name: "dropbox",
+  color1: "#007ee5",
+  color2: "#7b8994",
+  color3: "#47525d",
+  background: "#3d464d",
+}, {
+  name: "stay22",
+  color1: "#87D37C",
+  color2: "#7b8994",
+  color3: "#47525d",
+  background: "#333333",
+}, {
+  name: "united states",
+  color1: "#ffffff",
+  color2: "#0071bc",
+  color3: "#e31c3d",
+  background: "#323a45"
+}, {
+  name: "united states",
+  color1: "#ffffff",
+  color2: "#0071bc",
+  color3: "#e31c3d",
+  background: "#494440"
+}, {
+  name: "united states",
+  color1: "#ffffff",
+  color2: "#0071bc",
+  color3: "#e31c3d",
+  background: "#112e51"
+}, {
+  name: "canada",
+  color1: "#ffffff",
+  color2: "#ff0000",
+  color3: "#ff0000",
+  background: "#777777"
+}];
