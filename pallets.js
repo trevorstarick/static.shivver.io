@@ -22,8 +22,8 @@ var pallets = [{
   name: "ubuntu",
   color1: "#dd4814",
   color2: "#77216f",
-  // color3: '#5e2750',
-  color3: "#2c001e",
+  color3: "#5e2750",
+  // color3: "#2c001e",
   background: "#AEA79F",
 }, {
   name: "airbnb",
