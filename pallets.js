@@ -53,13 +53,13 @@ var pallets = [{
   color3: "#e31c3d",
   background: "#323a45"
 }, {
-  name: "united states",
+  name: "united states - alt1",
   color1: "#ffffff",
   color2: "#0071bc",
   color3: "#e31c3d",
   background: "#494440"
 }, {
-  name: "united states",
+  name: "united states - alt2",
   color1: "#ffffff",
   color2: "#0071bc",
   color3: "#e31c3d",
