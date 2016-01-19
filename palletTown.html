@@ -4,58 +4,6 @@
     <meta charset="UTF-8">
     <title>Pallet Town</title>
     <style type="text/less">
-        @white: #ffffff;
-        @grey: #777777;
-        @black: #000000;
-
-        /* test */
-        @color1: #ff0000;
-        @color2: #00ff00;
-        @color3: #0000ff;
-        @background: @grey;
-
-        /* ubuntu */
-        @color1: #dd4814;
-        @color2: #77216f;
-        @color3: #2c001e;
-        @background: #333333;
-
-        /* airbnb */
-        @color1: #fd5c63;
-        @color2: #fd5c63;
-        @color3: #fd5c63;
-        @background: #f5f5f5;
-
-        /* auth0 */
-        @color1: #16214d;
-        @color2: #44c7f4;
-        @color3: #eb5424;
-        @background: #d0d2d3;
-
-        /* reddit */
-        @color1: #ff5700;
-        @color2: #ff8b60;
-        @color3: #9494ff;
-        @background: #eff7ff;
-
-        /* facebook */
-        @color1: #e9eaed;
-        @color2: #3b5998;
-        @color3: #3b5998;
-        @background: #777777;
-
-        /* dropbox */
-        @color1: #007ee5;
-        @color2: #7b8994;
-        @color3: #47525d;
-        @background: #3d464d;
-
-        /* stay22 */
-        @color1: #87D37C;
-        @color2: #7b8994;
-        @color3: #47525d;
-        @background: #333333;
-
         @palletWidth: 300px;
         @palletHeight: @palletWidth;
 
@@ -67,10 +15,23 @@
         @boxHeight: (@palletHeight /  2) - @marginTop;
 
         body {
-          background: fade(@background, 15%);
           width: 100%;
           height: 100%;
-          margin: 0 auto;
+          font-family: "Helvetica", sans-serif;
+          text-align: center;
+          margin: 20px 0;
+        }
+        h1 {
+          font-weight: 100;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+        .wrapper {
+          position: relative;
+          width: 400px;
+          height: 400px;
+          display: inline-block;
         }
         .boxwrapper {
             width: @palletWidth;
@@ -81,7 +42,6 @@
             top: 0; left: 0; bottom: 0; right: 0;
         }
         .boxwrap {
-            background: fade(@background, 100%);
             width: @palletWidth;
             height: @palletHeight;
             position: relative;
@@ -90,7 +50,6 @@
         }
 
         .box1 {
-            background: fade(@color1, 100%);
             width: @boxWidth;
             height: @boxHeight;
             position: relative;
@@ -99,7 +58,6 @@
             top: @marginTop;
         }
         .box2 {
-            background: fade(@color2, 100%);
             content: '';
             position: relative;
             width: @boxWidth;
@@ -111,7 +69,6 @@
             transform: skewY(45deg);
         }
         .box3 {
-            background: fade(@color3, 100%);
             content: '';
             position: relative;
             width: @boxWidth;
@@ -138,14 +95,32 @@
     </style>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.min.js"></script>
 </head>
-<body>
-    <div class="boxwrapper">
-        <div class="grain"></div>
-        <div class="boxwrap"></div>
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
+<body id="app">
+      <div class="wrapper" v-for="pallet in pallets">
+      <h1>{{pallet.name}}</h1>
+      <div class="boxwrapper">
+          <div class="grain"></div>
+          <div class="boxwrap" style="background-color:{{pallet.background}}"></div>
+          <div class="box1" style="background-color:{{pallet.color1}}"></div>
+          <div class="box2" style="background-color:{{pallet.color2}}"></div>
+          <div class="box3" style="background-color:{{pallet.color3}}"></div>
+      </div>
     </div>
+
+    <footer>pallet town &middot; shivver.io &middot; @trevorstarick</footer>
 </body>
+<script src="http://static.shivver.io/pallets.js"></script>
+<script>
+pallets.sort(function(a, b) {
+  return (a.name >= b.name);
+});
+new Vue({
+  el: "#app",
+  data: {
+    pallets: pallets
+  }
+});
+</script>
 </html>
