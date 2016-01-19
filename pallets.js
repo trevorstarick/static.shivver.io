@@ -1,15 +1,29 @@
+// https://github.com/reimertz/brand-colors/blob/master/data/brandColors.js
+
 var pallets = [{
-  name: "test",
-  color1: "#ff0000",
-  color2: "#00ff00",
-  color3: "#0000ff",
+  name: "500px",
+  color1: "#0099e5",
+  color2: "#ff4c4c",
+  color3: "#34bf49",
   background: "#777777",
+},{
+  name: "ebay",
+  color1: '#e53238',
+  color2: '#0064d2',
+  color3: '#f5af02',
+  color4: '#86b817',
+}, {
+  name: 'esl',
+  color1: '#0d9ddb',
+  color2: '#48b8e7',
+  color3: '#efecea',
+  background: '#2c2b2b'
 }, {
   name: "ubuntu",
   color1: "#dd4814",
-  color2: "#77216f",
-  color3: "#2c001e",
-  background: "#333333",
+  color2: "#77216F",
+  color3: "#5E2750",
+  background: "#2C001E",
 }, {
   name: "airbnb",
   color1: "#fd5c63",
