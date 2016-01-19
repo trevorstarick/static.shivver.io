@@ -93,34 +93,45 @@
             pointer-events: none;
         }
     </style>
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.min.js"></script>
 </head>
 <body id="app">
-      <div class="wrapper" v-for="pallet in pallets">
+    <div class="wrapper" v-for="pallet in pallets">
       <h1>{{pallet.name}}</h1>
       <div class="boxwrapper">
           <div class="grain"></div>
-          <div class="boxwrap" style="background-color:{{pallet.background}}"></div>
-          <div class="box1" style="background-color:{{pallet.color1}}"></div>
-          <div class="box2" style="background-color:{{pallet.color2}}"></div>
-          <div class="box3" style="background-color:{{pallet.color3}}"></div>
+          <div class="boxwrap" style="background-color:{{pallet.background}}" data-color="{{pallet.background}}"></div>
+          <div class="box1" style="background-color:{{pallet.color1}}" data-color="{{pallet.color1}}"></div>
+          <div class="box2" style="background-color:{{pallet.color2}}" data-color="{{pallet.color2}}"></div>
+          <div class="box3" style="background-color:{{pallet.color3}}" data-color="{{pallet.color3}}"></div>
       </div>
     </div>
 
     <footer>pallet town &middot; shivver.io &middot; @trevorstarick</footer>
 </body>
-<script src="http://static.shivver.io/pallets.js"></script>
+
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.swf">
+<script src="//static.shivver.io/pallets.js"></script>
+
 <script>
-pallets.sort(function(a, b) {
-  return (a.name >= b.name);
-});
-new Vue({
-  el: "#app",
-  data: {
-    pallets: pallets
-  }
-});
+  pallets.sort(function(a, b) {
+    return (a.name >= b.name);
+  });
+
+  new Vue({
+    el: "#app",
+    data: {
+      pallets: pallets
+    }
+  });
+
+  $(".boxwrapper>*").bind("click", function(e) {
+    var data = $(this).attr('data-color');
+    console.log(data);
+  });
+
 </script>
 </html>
