@@ -11,7 +11,7 @@ var pallets = [{
   color1: '#e53238',
   color2: '#0064d2',
   color3: '#f5af02',
-  color4: '#86b817',
+  background: '#86b817',
 }, {
   name: 'esl',
   color1: '#0d9ddb',
